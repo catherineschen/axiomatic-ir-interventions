@@ -15,6 +15,12 @@ This code uses a fork of the [TransformerLens](https://github.com/neelnanda-io/T
 
 # Code
 
-We provide a demo of how we perform activation patching for retrieval in our paper.
+We provide a demo of how we perform activation patching for retrieval in `retrieval_patching_demo.py`. 
 
+```
+python retrieval_patching_demo.py
+```
+
+
+-----------
 Corresponding author: Catherine Chen
