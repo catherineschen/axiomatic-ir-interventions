@@ -8,3 +8,13 @@ If you find this code or any of the ideas in the paper useful, please consider c
 ```
 
 ```
+
+# Setup
+
+This code uses a fork of the [TransformerLens](https://github.com/neelnanda-io/TransformerLens) package, which we make additional changes to support activation patching in a retrieval setting. 
+
+# Code
+
+We provide a demo of how we perform activation patching for retrieval in our paper.
+
+Corresponding author: Catherine Chen
