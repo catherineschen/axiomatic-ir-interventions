@@ -103,7 +103,7 @@ def get_act_patch_attn_head_out_all_pos(
                 corrupted_tokens["input_ids"],
                 one_zero_attention_mask=corrupted_tokens["attention_mask"],
                 return_type="embeddings",
-                fwd_hooks = [(utils.get_act_name("v", layer), hook_fn)],
+                fwd_hooks = [(utils.get_act_name("z", layer), hook_fn)],
             )
             patched_embedding = patched_outputs[:,0,:].squeeze(0)
             results[layer, head] = patching_metric(patched_embedding)
