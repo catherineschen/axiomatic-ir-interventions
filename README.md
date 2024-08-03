@@ -17,7 +17,11 @@ If you find this code or any of the ideas in the paper useful, please consider c
 
 # Setup
 
-This code uses a fork of the [TransformerLens](https://github.com/neelnanda-io/TransformerLens) package, which we make additional changes to support activation patching in a retrieval setting. (A copy of the unofficial fork can be temporarily found in the submission code [here](https://github.com/catherineschen/tasb-transformer-lens).)
+This code uses a copy of the [TransformerLens](https://github.com/neelnanda-io/TransformerLens) package, which we make additional changes to support activation patching in a retrieval setting. Changes made to the original TransformerLens package to support activation patching for retrieval (TAS-B) can be found in the following files:
+
+- `components.py`
+- `loading_from_pretrained.py`
+- `HookedEncoder.py`
 
 # Code
 
