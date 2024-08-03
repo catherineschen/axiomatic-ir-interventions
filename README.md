@@ -6,12 +6,18 @@ This code corresponds to the paper: __Axiomatic Causal Interventions for Reverse
 
 If you find this code or any of the ideas in the paper useful, please consider citing:
 ```
-
+@inproceedings{chen2024axiomatic,
+  title={Axiomatic Causal Interventions for Reverse Engineering Relevance Computation in Neural Retrieval Models},
+  author={Chen, Catherine and Merullo, Jack and Eickhoff, Carsten},
+  booktitle={Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages={1401--1410},
+  year={2024}
+}
 ```
 
 # Setup
 
-This code uses a fork of the [TransformerLens](https://github.com/neelnanda-io/TransformerLens) package, which we make additional changes to support activation patching in a retrieval setting. 
+This code uses a fork of the [TransformerLens](https://github.com/neelnanda-io/TransformerLens) package, which we make additional changes to support activation patching in a retrieval setting. (A copy of the unofficial fork can be temporarily found in the submission code [here](https://github.com/catherineschen/tasb-transformer-lens).)
 
 # Code
 
