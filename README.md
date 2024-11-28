@@ -14,7 +14,6 @@ This code uses a copy of the [TransformerLens](https://github.com/neelnanda-io/T
 
 Install necessary packages and locally install our modified version of TransformerLens that supports TAS-B:
 ```
-pip install -r requirements.txt
 pip install ./TransformerLens
 ```
 
