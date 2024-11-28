@@ -231,6 +231,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run activation patching with the specific patching experiment and perturbation types.")
     parser.add_argument("experiment_type", type=str, help="What will be patched (e.g., block).")
     parser.add_argument("perturb_type", type=str, help="The perturbation to apply (e.g., append).")
-
+    
     args = parser.parse_args()
+
+    valid_exp_types = {"block", "head_all", "head_pos", "head_attn", "labels"}
+    valid_perturb_types = {"append", "prepend"}
+
+    assert args.experiment_type in valid_exp_types, f"Invalid argument: experiment_type. Must be one of {valid_exp_types}."
+    assert args.perturb_type in valid_perturb_types, f"Invalid argument: perturb_type. Must be one of {valid_perturb_types}."
+    
     _ = run_experiment(args.experiment_type, args.perturb_type)
