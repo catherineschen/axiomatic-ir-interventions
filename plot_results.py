@@ -14,7 +14,7 @@ import os
 import glob
 import json
 import csv
-
+import argparse
 
 def load_jsonl_file_into_dict(fname):
     data = {}
@@ -623,4 +623,16 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Plot results.")
+    parser.add_argument("experiment_type", type=str, help="The result to plot (e.g. block).")
+    parser.add_argument("perturb_type", type=str, help="The perturbation to apply (e.g., append).")
+
+    args = parser.parse_args()
+
+    valid_exp_types = {"block", "head_all", "head_pos", "head_attn"}
+    valid_perturb_types = {"append", "prepend"}
+
+    assert args.experiment_type in valid_exp_types, f"Invalid argument: experiment_type. Must be one of {valid_exp_types}."
+    assert args.perturb_type in valid_perturb_types, f"Invalid argument: perturb_type. Must be one of {valid_perturb_types}."
+
+    _ = main(args.experiment_type, args.perturb_type)
