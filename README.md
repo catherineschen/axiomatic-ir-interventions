@@ -52,7 +52,7 @@ The patching experiments are currently designed to be run on a single GPU, and d
 
 To visualize the results:
 ```
-python plot_results.py
+python plot_results.py EXPERIMENT_TYPE PERTURB_TYPE
 ```
 
 -----------
